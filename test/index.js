@@ -37,7 +37,9 @@ describe('Lambda Executor', function() {
     });
   });
 
-  it('should succeed', function(done) {
+  it('should succeed with es2015 code', function(done) {
+    //Babel loading takes some time
+    this.timeout(15000);
     lambdaExecutor(path.join(__dirname, 'functions/es2015.js'), 'handler', {}, 3000, 128, function(err, result) {
       expect(err).toBe(null);
       expect(result).toEqual('Execution successful');

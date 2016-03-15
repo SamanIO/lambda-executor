@@ -5,7 +5,6 @@ var Context = require('./context');
 
 process.on('message', function(msg) {
   if (msg.babel) {
-    console.log('register')
     require('babel-core/register');
   }
 
