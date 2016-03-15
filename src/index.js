@@ -40,17 +40,21 @@ module.exports = function(func, handler, event, timeout, memory, callback, babel
     switch (code) {
       case 0:
         break;
-      case 1:
+      case 1: // Windows
+      case 8: // Ubuntu
         callback('JavaScript error (see console)', null);
         break;
-      case 3:
+      case 3: //Windows only no code in Ubuntu
         callback('Function ran out of memory', null);
         break;
       case 99:
         callback('Function timed out', null);
         break;
-      default:
-        callback('Error ' + code);
+    }
+    switch (signal) {
+      case 'SIGABRT': // Ubuntu
+        callback('Function ran out of memory', null);
+        break;
     }
   });
 };
