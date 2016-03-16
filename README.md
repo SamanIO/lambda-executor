@@ -1,5 +1,7 @@
 # Lambda Executor
 
+[![Travis](https://img.shields.io/travis/SamanIO/lambda-executor.svg?style=flat-square)](https://travis-ci.org/SamanIO/lambda-executor) [![npm](https://img.shields.io/npm/v/lambda-executor.svg?style=flat-square)](https://www.npmjs.com/package/lambda-executor)
+
 A library to easily execute AWS lambda functions from JavaScript code.
 
 ## How it works
