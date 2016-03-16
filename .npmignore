@@ -2,4 +2,6 @@
 .editorconfig
 .eslintrc
 .travis.yml
+npm-debug.log
+.idea
 test
