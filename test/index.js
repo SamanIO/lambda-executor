@@ -14,8 +14,6 @@ describe('Lambda Executor', function() {
   });
 
   it('should run out of memory', function(done) {
-    //Give test some time
-    this.timeout(15000);
     lambdaExecutor(path.join(__dirname, 'functions/memory.js'), 'handler', {}, 15000, 10, function(err, result) {
       expect(err).toEqual('Function ran out of memory');
       expect(result).toBe(null);

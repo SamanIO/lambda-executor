@@ -5,6 +5,7 @@ var Context = require('./context');
 
 process.on('message', function(msg) {
   if (msg.babel) {
+    console.log('Register babel');
     require('babel-core/register');
   }
 
@@ -18,6 +19,7 @@ process.on('message', function(msg) {
     process.exit(0);
   });
 
+  console.log('Executing function');
   timers.setTimeout(function() {
     process.exit(99);
   }, msg.timeout);
