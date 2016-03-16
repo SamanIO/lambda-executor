@@ -14,8 +14,7 @@ var childProcess = require('child_process');
  * @param {boolean} babel Register babel to use ES2015 syntax
  */
 module.exports = function(func, handler, event, timeout, memory, callback, babel) {
-  var tester = childProcess.fork('./executor', [], {
-    cwd: __dirname,
+  var tester = childProcess.fork(__dirname + '/executor', [], {
     execArgv: [
       '--max-old-space-size=' + memory
     ]
