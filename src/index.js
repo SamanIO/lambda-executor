@@ -35,7 +35,7 @@ module.exports = function(func, handler, event, timeout, memory, callback, babel
     callback(msg.err, msg.result);
   });
 
-  tester.on('exit', function(code) {
+  tester.on('exit', function(code, signal) {
     if (!callback) return;
     switch (code) {
       case 0:
