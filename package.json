@@ -1,6 +1,6 @@
 {
   "name": "lambda-executor",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A library to easily execute lambda functions",
   "author": "Christoph Kraemer <christoph@kraemer.io>",
   "license": "MIT",
